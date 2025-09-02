@@ -1,0 +1,328 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&family=Roboto:wght@500&display=swap");
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+#Frame {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Navigation */
+#navbar {
+  background: linear-gradient(135deg, #0b0b0b 0%, #334155 100%);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Aman {
+  font-size: clamp(1.2rem, 2.5vw, 1.85rem);
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+}
+
+#navElements {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: clamp(1rem, 3.3vw, 2.5rem);
+  padding: 0;
+  margin: 0;
+}
+
+#navElements a {
+  text-decoration: none;
+}
+
+#navElements li {
+  font-size: clamp(0.9rem, 1.3vmax, 1.15rem);
+  font-weight: 500;
+  color: rgb(247, 248, 247);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+#navElements li:hover {
+  transform: scale(1.1);
+  color: rgba(156, 205, 246, 0.896);
+}
+
+/* Home Page */
+#homePage {
+  display: flex;
+  /* background-color: rgba(246, 246, 249, 0.999); */
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+#centralHP {
+  width: 85%;
+  max-width: 1200px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(120px, 15%) 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+#verticalNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(2vh, 4vh, 3rem);
+  padding: 1rem;
+}
+
+#verticalNav a {
+  transition: transform 0.3s ease;
+}
+
+#verticalNav a:hover {
+  transform: scale(1.25) rotate(10deg);
+}
+
+#HomeMainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#HomeMainContent-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+#HomeMainContent-text h1 {
+  font-size: clamp(2.5rem, 8vmin, 4rem);
+  font-weight: 600;
+  color: #252e3b;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  font-family: "Poppins", sans-serif;
+}
+
+#HomeMainContent-text h4 {
+  font-size: clamp(1rem, 3.5vmin, 1.55rem);
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+#HomeMainContent-text p {
+  font-size: clamp(0.9rem, 3vmin, 1.15rem);
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.primary-button {
+  background: linear-gradient(135deg, #0b0b0b 0%, #334155 100%);
+  color: white;
+  border: none;
+  padding: 1.5vh 3vh;
+  font-size: clamp(0.9rem, 3.5vmin, 1.3rem);
+  font-weight: 600;
+  border-radius: 1vh;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1vh;
+  box-shadow: 0 0.5vh 1.5vh rgba(11, 11, 11, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.primary-button:hover {
+  transform: translateY(-0.25vh);
+  box-shadow: 0 0.75vh 2.5vh rgba(11, 11, 11, 0.4);
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: clamp(1rem, 2.5vh, 1.5rem) 1rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: clamp(0.9rem, 3.5vmin, 1.3rem);
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 6rem;
+  width: fit-content;
+  min-width: 140px;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#HomeMainContent-image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#HomeMainContent-image img {
+  border-radius: 50%;
+  height: clamp(250px, 40vw, 380px);
+  width: clamp(250px, 40vw, 380px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#HomeMainContent-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  #navbar {
+    padding: 1rem 5%;
+  }
+
+  #centralHP {
+    width: 90%;
+    gap: 1rem;
+  }
+
+  #HomeMainContent {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #navbar {
+    padding: 1rem 5%;
+    flex-wrap: wrap;
+  }
+
+  #navElements {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 1rem;
+  }
+
+  #navElements.active {
+    display: flex;
+  }
+
+  #navElements li {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  #homePage {
+    padding-top: 100px;
+  }
+
+  #centralHP {
+    width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+  }
+
+  #verticalNav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+  }
+
+  #HomeMainContent {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  #HomeMainContent-text {
+    min-width: auto;
+  }
+
+  #HomeMainContent-image img {
+    height: clamp(200px, 35vw, 280px);
+    width: clamp(200px, 35vw, 280px);
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  #navbar {
+    padding: 1rem 3%;
+  }
+
+  #centralHP {
+    width: 100%;
+  }
+
+  #homePage {
+    padding: 120px 1rem 2rem;
+  }
+
+  #verticalNav {
+    gap: 1rem;
+  }
+}
